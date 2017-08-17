@@ -23,14 +23,30 @@
         background-color: white;
     }
     amp-img {
-        background-color: gray;
-        border: 1px solid black;
+        border: 5px solid black;
+    }
+    .grey-placeholder {
+        background-color: grey;
     }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <h1>Welcome to the mobile web</h1>
-    <amp-img src="/assets/images/food_yaki_curry.png" alt="焼きカレー" height="180" width="180"></amp-img>
+    <amp-img
+    src="/assets/images/food_yaki_curry.png"
+    alt="焼きカレー"
+    width="180"
+    height="180"
+    layout="responsive">
+    </amp-img>
+
+    <amp-img
+    class="grey-placeholder"
+    srcset="/assets/images/food_yaki_curry.png 640w,
+    /assets/images/food_roast_beef_don.png 320w"
+    width="180"
+    height="180"
+    layout="responsive">
   </body>
 </html>
